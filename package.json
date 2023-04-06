@@ -1,0 +1,20 @@
+{
+  "name": "adimasfaisal-betest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adimasfaisal/adimasfaisal-betest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adimasfaisal/adimasfaisal-betest/issues"
+  },
+  "homepage": "https://github.com/adimasfaisal/adimasfaisal-betest#readme"
+}
