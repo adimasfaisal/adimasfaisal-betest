@@ -39,8 +39,6 @@ const login = async (req, res, next) => {
     signIn.user = await userService.getUserInfoById(signIn.userId);
 
     client.setEx("userInfo", 3600, JSON.stringify(signIn.user));
-
-    const userCache = await client.get("userInfo");
     await client.quit();
 
     return res
@@ -52,7 +50,6 @@ const login = async (req, res, next) => {
 };
 
 const getLoggedUser = async (req, res, next) => {
-  await client.connect();
   try {
     const accounts = await accountService.loggedUserMoreThanThreeDays();
     res.status(200).send({
