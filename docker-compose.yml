@@ -1,6 +1,21 @@
-version: '3'
+version: "3"
 
 services:
+  ms_adimasfaisal_betest:
+    environment:
+      NODE_ENV: development
+      APPLICATION_PORT: 5000
+      DB_URL: "mongodb+srv://adimasfaisal:F%40isal0199@cluster0.i7spw1g.mongodb.net/db_adimasfaisal_betest"
+      JWT_SECRET_KEY: "sdfds87dsg7s8dv"
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: ms_adimasfaisal_betest
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    command: npm start
   redis:
     image: redis
     ports:
